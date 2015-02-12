@@ -1,0 +1,20 @@
+{
+  "name": "Learning_Angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/TaylorFoster90/Learning_Angular",
+  "authors": [
+    "Taylor Foster <tagfoster90@gmail.com>"
+  ],
+  "description": "learning",
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2"
+  }
+}
