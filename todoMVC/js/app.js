@@ -25,11 +25,9 @@ var tasks =[{
         this.tasks.splice(this.tasks.indexOf(task), 1);
     	},
       clear: function(){
-        var something = _.filter(tasks, 'finished', true);
-        
-        
+        this.tasks = _.filter(tasks, 'finished', false);
+        }
       } 
-    }
   });
 })(window);
 
