@@ -1,15 +1,20 @@
 (function (window) {
     'use strict';
 
-var tasks = ['Taste Javascript', 'Buy a unicorn'] 
+var tasks =[{
+	content: "Taste Javascript",
+	done: false
+},
+{
+	content: 'Buy a unicorn',
+	done: true
+}]
 
 // Your starting point. Enjoy the ride!
   new Vue({
     el: '#todoapp',
     data: {
-      tasks: tasks
-    }
+      todos: tasks,
+    },
   });
-
-
 })(window);
