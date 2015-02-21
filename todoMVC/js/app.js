@@ -7,13 +7,11 @@ var tasks =[{
 },
 {
 	content: 'Buy a unicorn',
-	finished: false,
-  edit: false
+	finished: false
 },
 {
   content: 'Hello World',
-  finished: false,
-  edit: false
+  finished: false
 }]
 
 // Your starting point. Enjoy the ride!
@@ -26,6 +24,14 @@ var tasks =[{
     	remove: function(task){
         this.tasks.splice(this.tasks.indexOf(task), 1);
     	},
+      clear: function(){
+        var something = _.filter(tasks, 'finished', true);
+        
+        
+      } 
     }
   });
 })(window);
+
+
+console.log()
