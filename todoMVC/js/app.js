@@ -7,14 +7,25 @@ var tasks =[{
 },
 {
 	content: 'Buy a unicorn',
-	finished: false
+	finished: false,
+  edit: false
+},
+{
+  content: 'Hello World',
+  finished: false,
+  edit: false
 }]
 
 // Your starting point. Enjoy the ride!
   new Vue({
     el: '#todoapp',
     data: {
-      todos: tasks,
+      tasks: tasks,
+    },
+    methods: {
+    	remove: function(task){
+        this.tasks.splice(this.tasks.indexOf(task), 1);
+    	},
     }
   });
 })(window);
