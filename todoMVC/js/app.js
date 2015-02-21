@@ -3,11 +3,11 @@
 
 var tasks =[{
 	content: "Taste Javascript",
-	done: false
+	finished: true
 },
 {
 	content: 'Buy a unicorn',
-	done: true
+	finished: false
 }]
 
 // Your starting point. Enjoy the ride!
@@ -15,6 +15,6 @@ var tasks =[{
     el: '#todoapp',
     data: {
       todos: tasks,
-    },
+    }
   });
 })(window);
