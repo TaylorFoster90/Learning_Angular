@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='store'>
+<html ng-app='tiy-catalog'>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body ng-controller="StoreController as store">
+    <body ng-controller="MainController as ctrl">
+        <div>{{ctrl.results.listing_id}}</div>
         <!--bower:js-->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
