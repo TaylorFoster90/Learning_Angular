@@ -15,7 +15,10 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body ng-controller="MainController as ctrl">
-        <div>{{ctrl.results.listing_id}}</div>
+    <ul>
+        <li ng-repeat="ids in ctrl.description">{{ids}}</li>
+    </ul>
+
         <!--bower:js-->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
