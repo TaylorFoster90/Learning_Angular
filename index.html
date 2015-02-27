@@ -15,7 +15,14 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body ng-controller="MainController as ctrl">
-        <h1 style="margin-left: 2em"> this call returned {{ctrl.results.length}} items</h1>
+        <h1 style="margin-left: 2em"> this call returned {{ctrl.trending.length}} items</h1>
+        <ul ng-repeat="trend in ctrl.trending">
+
+                <li>{{trend.title}}</li>
+                <li>{{trend.price}}</li>
+                <li><img ng-src="{{trend.images.small}}"></img></li>
+
+        </ul>
         <!--bower:js-->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>

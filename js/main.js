@@ -10,8 +10,8 @@
                             description: object.description,
                             price: object.price,
                             images: {
-                                fullImage: object.MainImage.url_fullxfull,
-                                smallImage: object.MainImage.url_170x135
+                                full: object.MainImage.url_fullxfull,
+                                small: object.MainImage.url_170x135
                             }
                         }
                     })
@@ -32,9 +32,8 @@
                 var self = this
                 $http.jsonp(apiTemplate(API))
                     .success(function(data) {
-                            self.results = data.results;
-                            self.populate = mapData(self.results)
-                            
+                            self.trending = mapData(data.results)
+
                         }
 
                 )
