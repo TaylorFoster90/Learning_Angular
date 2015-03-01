@@ -1,46 +1,40 @@
 <!DOCTYPE html>
-<html ng-app="ngRouteExample">
+<html ng-app="scotchApp">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!--bower:css-->
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
         <!--endbower-->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-<div ng-controller="MainController">
-  Choose:
-  <a href="Book/Moby">Moby</a> |
-  <a href="Book/Moby/ch/1">Moby: Ch1</a> |
-  <a href="Book/Gatsby">Gatsby</a> |
-  <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
-  <a href="Book/Scarlet">Scarlet Letter</a><br/>
-
-  <div ng-view></div>
-
-  <hr />
-
-  <pre>$location.path() = {{$location.path()}}</pre>
-  <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
-  <pre>$route.current.params = {{$route.current.params}}</pre>
-  <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
-  <pre>$routeParams = {{$routeParams}}</pre>
-</div>
-        <!--bower:js-->
+    <body ng-controller="mainController">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+            <div ng-view></div>
+            
+        </div>
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
-        <script src="../bower_components/lodash/lodash.js"></script>
-        <!--endbower-->
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script src="../bower_components/angular-route/angular-route.js"></script>
         </script>
+        <script src="scripts.js"></script>
     </body>
 </html>

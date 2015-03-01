@@ -1,6 +1,18 @@
 (function() {
-    angular.module('tiy-catalog', [])
-        .controller('MainController', ['$http',
+    var tiyCatalog = angular.module('tiy-catalog', ['ngRoute'])
+    tiyCatalog.config(function($routeProvider){
+        $routeProvider
+        .when('/', {
+            templateURL : '/pages/main.html',
+            controller : 'MainController'
+        })
+        .when('/long',{
+            templateURL: '/pages/long.html',
+            controller: 'AlternateController'
+        })
+        });
+
+        tiyCatalog.controller('MainController', ['$http',
             function($http) {
                 /* API call for etsy trending 25 items */
                 function mapData(data) {
@@ -32,6 +44,7 @@
 
                 var self = this
                 $http.jsonp(apiTemplate(API))
+                
                     .success(function(data) {
                             self.trending = mapData(data.results);
 
@@ -44,4 +57,7 @@
                 )
             }
         ]);
+        tiyCatalog.controller('AlternateController', function($scope){
+            $scope.message = 'first view motherfuckers!!!';
+        })
 })();

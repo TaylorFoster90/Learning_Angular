@@ -9,6 +9,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!--bower:css-->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
         <!--endbower-->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -19,7 +20,7 @@
             <nav class="top_nav">
                 <icon><a href="#" class="glyphicon glyphicon-th"></a></icon>
                 <icon><a href="#" class="glyphicon glyphicon-th-list"></a></icon>
-            </nav>
+            </nav> 
             <article class="col-xs-12 col-sm-5 col-md-4 col-sm-offset-1 col-md-offset-0" ng-repeat="trend in ctrl.trending">
                 <figure>
                     <img ng-click="details =! details" ng-src="{{trend.images.small}}" />
@@ -31,14 +32,15 @@
                 <h4 ng-show="details">{{trend.title}}</h4>
                 <p ng-show="details">{{trend.description}}</p>
                 
-            </article> 
-        </div>
+</article>           
+        </div> 
+
         <!--bower:js-->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/vue/dist/vue.js"></script>
         <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
         <!--endbower-->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
