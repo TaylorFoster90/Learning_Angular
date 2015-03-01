@@ -6,7 +6,7 @@
                 function mapData(data) {
                     return _.map(data, function(object) {
                         return {
-                            title: object.title,
+                            title: object.title.substring(0,10),
                             description: object.description,
                             price: object.price,
                             images: {
@@ -29,10 +29,15 @@
                 console.log(apiTemplate(API))
 
 
+
                 var self = this
                 $http.jsonp(apiTemplate(API))
                     .success(function(data) {
-                            self.trending = mapData(data.results)
+                            self.trending = mapData(data.results);
+
+                            self.show = function(thing){
+                                self.thing =! self.thing;
+                            }
 
                         }
 
