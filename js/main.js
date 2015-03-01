@@ -6,7 +6,7 @@
                 function mapData(data) {
                     return _.map(data, function(object) {
                         return {
-                            title: object.title.substring(0,10),
+                            title: object.title,
                             description: object.description,
                             price: object.price,
                             images: {

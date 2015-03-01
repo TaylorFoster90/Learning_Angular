@@ -24,14 +24,14 @@
                 <figure>
                     <img ng-click="details =! details" ng-src="{{trend.images.small}}" />
                 </figure>
-                <h2>{{trend.title}}</h2>
-                <h3>{{trend.price | currency}}</h3>
+                <h2>{{trend.price | currency}}</h2>
                 <button class="btn btn-sdefault" href="#" role="button">
                 <icon class="glyphicon glyphicon-plus-sign"></icon>Add to Cart
                 </button>
+                <h4 ng-show="details">{{trend.title}}</h4>
                 <p ng-show="details">{{trend.description}}</p>
                 
-            </article>
+            </article> 
         </div>
         <!--bower:js-->
         <script src="bower_components/jquery/dist/jquery.js"></script>

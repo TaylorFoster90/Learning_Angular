@@ -96,52 +96,15 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
- article {
-    text-align: center;
-    margin-bottom: 3em;
-    height: 300px;
-    overflow: scroll;
- }
-a {
-    text-decoration: none;
-    color: cornflowerblue;
-}
-a:hover{
-    text-decoration: none;
-    color: cornflowerblue;
-}
 
 
 
-li h2 {
-    color: cornflowerblue;
-}
-.top_nav {
-    color: cornflowerblue;
-    text-align: right;
-    font-size: 2em;
-    border-bottom: 2px solid cornflowerblue;
-    padding-bottom: .5em;
-    margin-bottom: 1.5em;
-}
-.product_wrapper {
-    border: 2px solid cornflowerblue;
-    padding: 1.4em 2em;
-    margin: 0 auto;
-    width: 80%;
-}
-article button {
-    background-color: cornflowerblue;
-    color: white;
-}
-article h2 {
-    color:#989898;
-    font-weight: bold;
-    font-family: sans-serif;
-}
-article img {
-    border-radius: 2em;
-}
+
+
+
+
+
+
 
 
 
