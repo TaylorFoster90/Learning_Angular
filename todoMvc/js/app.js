@@ -3,7 +3,7 @@
 var todos = [
 		{
 			task: 'Taste Javascript',
-			complete: true
+			complete: true,
 		},
 		{
 		task: 'Buy a unicorn',
@@ -22,5 +22,13 @@ app.controller('MainController', [ '$firebase', function($firebase){
 		this.remove = function(item){
 			_.pull(this.tasks, item)
 		};
+		this.markAll = function(){
+			_.forEach(this.tasks, function(object){
+					return object.complete =! object.complete
+			})
+		}
+		this.add = function(todo){
+			this.tasks.push({task: todo, complete: false})
+		}
 	}]);
 })(window);

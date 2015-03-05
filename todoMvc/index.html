@@ -12,7 +12,7 @@
 		<section id="todoapp" ng-controller="MainController as ctrl">
 			<header id="header">
 				<h1>todos</h1>
-				<input id="new-todo" placeholder="What needs to be done?" autofocus>
+				<input id="new-todo" placeholder="What needs to be done?" ng-model="todo" ng-keyup="$event.keyCode == 13 && ctrl.add(todo)" autofocus>
 			</header>
 			<!-- This section should be hidden by default and shown when there are todos -->
 			<section id="main">
