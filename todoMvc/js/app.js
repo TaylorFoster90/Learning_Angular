@@ -9,21 +9,42 @@ app.controller('MainController', [ '$firebase', function($firebase){
 		var ref = new Firebase('https://tiy-catlog.firebaseio.com/todoMvc');
 		var sync = $firebase(ref);
 		this.data = sync.$asArray();
+		this.data.$watch(function(event){
+			console.log(event)
+		})
 		this.tasks = this.data;
-		this.remove = function(item){
-			this.tasks.$remove(item).then(console.log('removed '+ item.task + ' from the list'));
 
+		this.remove = function(item){
+			this.tasks.$remove(item)
 		};
+
 		this.markAll = function(complete){
 			_.forEach(this.data, function(object){
 					object.complete = complete
 		})
+		this.data.$save(complete)
 	}
+
 		this.add = function(todo){
-			this.data.$add({task:todo, complete: false}).then(console.log('added '+todo+' to the list'))
+			this.data.$add({task:todo, complete: false})
 		};
+
 		this.editing= function(todo){
 			todo.edit = true;
+		}
+
+		this.doneEditing = function (todo){
+			todo.edit = false;
+			this.data.$save(todo)
+		}
+
+		this.clearComplete = function (todo){
+			for(var i=0;i<this.data.length;i++){
+				if(this.data[i].complete == true){
+					console.log(this.data[i].complete)
+					this.data.$remove(this.data[i])
+				}
+			}
 		}
 	}]);
 })(window);

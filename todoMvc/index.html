@@ -27,7 +27,9 @@
 							<label ng-dblclick="ctrl.editing(todo)">{{todo.task}}</label>
 							<button class="destroy" ng-click="ctrl.remove(todo)"></button>
 						</div>
-						<input class="edit" value="Create a TodoMVC template">
+						<form ng-submit="doneEditing(todo)">
+							<input class="edit" ng-model="todo.task" ng-blur="ctrl.doneEditing(todo)" ng-focus="todo == ctrl.editing(todo)">
+						</form>
 					</li>
 				</ul>
 			</section>
@@ -48,7 +50,7 @@
 					</li>
 				</ul>
 				<!-- Hidden if no completed items are left ↓ -->
-				<button id="clear-completed"></button>
+				<button id="clear-completed" ng-click="ctrl.clearComplete(ctrl.task)"></button>
 			</footer>
 		</section>
 		<footer id="info">
