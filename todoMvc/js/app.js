@@ -5,17 +5,16 @@
 	// Your starting point. Enjoy the ride!
 var app = angular.module('todoMvc', ['firebase']);
 
-app.controller('MainController', [ '$firebase', function($firebase){
+app.controller('MainController', [ '$firebase',function($firebase){
 		var ref = new Firebase('https://tiy-catlog.firebaseio.com/todoMvc');
 		var sync = $firebase(ref);
 		this.data = sync.$asArray();
 		this.data.$watch(function(event){
 			console.log(event)
 		})
-		this.tasks = this.data;
 
 		this.remove = function(item){
-			this.tasks.$remove(item)
+			this.data.$remove(item)
 		};
 
 		this.markAll = function(complete){
