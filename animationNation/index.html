@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="leoneStore">
+    <head>
+        <title></title>
+        <!--bower:css-->
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="../bower_components/fontawesome/css/font-awesome.css" />
+        <!--endbower-->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+      <header class="jumbotron">
+        <h1>Forever Leon</h1>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+      </header>
+
+
+      <!--Enable View Mode-->
+
+      <div ng-view=""></div>
+
+
+      <!--bower:js-->
+      <script src="../bower_components/jquery/dist/jquery.js"></script>
+      <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+      <script src="../bower_components/angular/angular.js"></script>
+      <script src="../bower_components/angular-route/angular-route.js"></script>
+      <script src="../bower_components/angular-animate/angular-animate.js"></script>
+      <!--endbower-->
+        <script src="js/main.js"></script>
+    </body>
+</html>

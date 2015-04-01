@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app='tiy-catalog'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!--bower:css-->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+        <!--endbower-->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body ng-controller="MainController as ctrl">
+        <div class="container product_wrapper">
+            <nav class="top_nav">
+                <icon><a href="#" class="glyphicon glyphicon-th"></a></icon>
+                <icon><a href="#" class="glyphicon glyphicon-th-list"></a></icon>
+            </nav>
+            <article class="col-xs-12 col-sm-5 col-md-4 col-sm-offset-1 col-md-offset-0" ng-repeat="trend in ctrl.trending">
+                <figure>
+                    <img ng-click="details =! details" ng-src="{{trend.images.small}}" />
+                </figure>
+                <h2>{{trend.price | currency}}</h2>
+                <button class="btn btn-sdefault" href="#" role="button">
+                <icon class="glyphicon glyphicon-plus-sign"></icon>Add to Cart
+                </button>
+                <h4 ng-show="details">{{trend.title}}</h4>
+                <p ng-show="details">{{trend.description}}</p>
+
+</article>
+        </div>
+
+        <!--bower:js-->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <!--endbower-->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

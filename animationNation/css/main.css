@@ -1,0 +1,84 @@
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.jumbotron {
+  background-color: rgba(48, 46, 46, .8);
+  text-align: center;
+  color: yellow;
+  font-family: sans-serif;
+}
+.jumbotron a {
+  color: yellow;
+}
+
+@-webkit-keyframes fallIn {
+  0% {
+    transform: translate(10em, 3em);
+  }
+  50%{
+    transform: translate(5em, 2em);
+  }
+  100% {
+    transform: translate(7em, 5em);
+  }
+}
+.ng-enter{
+  -webkit-animation: fallIn 1s both ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+   @-webkit-keyframes tutsFade {
+     0% {
+       border-radius: 50% 0 0 0;
+       background-color: yellow;
+     }
+     30% {
+       border-radius: 50% 50% 0 0;
+       background-color: cornflowerblue;
+     }
+     50% {
+       border-radius: 50% 50% 30% 0;
+       background-color: grey;
+     }
+     100% {
+       border-radius: 50% 50% 50% 50%;
+       background-color: pink;
+
+     }
+
+  }
+
+@-webkit-keyframes tutsRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+div{
+  position:absolute !important;
+  top:calc(50% - 100px);
+  left:calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  -webkit-animation: tutsRotate 4s 1s infinite linear alternate, tutsFade 4s 1s infinite  alternate;
+}*/
+
+   /*
+   shorthand:
+   .any {
+ animation: tutsFade 4s 1s infinite linear alternate;
+}
+*/
